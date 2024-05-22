@@ -8,6 +8,8 @@ public class Task {
     private LocalDate date;
     private String status;
 
+    public Task(){}
+
     public Task(Long id, String nome, LocalDate date, String status) {
         this.id = id;
         this.nome = nome;
