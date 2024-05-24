@@ -20,9 +20,15 @@ public class TaskController {
     //create
     @PostMapping
     public ResponseEntity<Task> createTask(@RequestBody Task newTask){
-        Long nextId = (long) tasks.size() + 1;
-        newTask.setId(nextId);
-        tasks.add(newTask);
+        if(tasks.isEmpty()) {
+            Long nextId = (long) tasks.size() + 1; //deixar id fora ja q nao é mais utilizavel, nao repetir existente
+            newTask.setId(nextId);
+            tasks.add(newTask);
+        }else {
+            Task nextId = tasks.get(tasks.size() -1);
+            newTask.setId(nextId.getId() + 1);
+            tasks.add(newTask);
+        }
         return ResponseEntity.ok(newTask);
     }
 
