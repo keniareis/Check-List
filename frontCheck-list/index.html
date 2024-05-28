@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1>Check-List</h1>
+    <div>
+        <input type="NewTask" placeholder="Nova tarefa">
+        <textarea id="taskDescription" name="taskDescription" rows="4" cols="50" placeholder="Descrição"></textarea>
+    </div>
+    <button class="addbtn">Adicionar</button>
+    <div class="dropdown">
+        <div class="btndrop">
+            <button class="dropbtn">
+                <span class="icon"><i class="fas fa-filter"></i></span>
+                Filtrar
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Por nome</a>
+                <a href="#">Por data</a>
+            </div>
+        </div>
+    </div>
+    <div class="task-component">
+        <button class="delete-task-btn">
+            <span class="icontrash"><i class="fas fa-trash"></i></span>
+        </button> 
+        <ul class="tasks">
+            <div class="campo">
+                <span class="name">Estudar</span>
+                <span class="description">Fazer tarefa de algoritmos</span>
+            </div>
+            <div class="custom-checkbox">
+                <input type="checkbox">
+            </div>
+        </ul>
+    </div>
+    <div class="task-component">
+        <button class="delete-task-btn">
+            <span class="icontrash"><i class="fas fa-trash"></i></span>
+        </button> 
+        <ul class="tasks">    
+            <div class="campo">
+                <span class="name">Estudar</span>
+                <span class="description">Fazer tarefa de algoritmos</span>
+            </div>
+            <div class="custom-checkbox">
+                <input id="checkbox" type="checkbox">        
+        </div>
+    </ul>
+    </div>
+</body>
+</html>
