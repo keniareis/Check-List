@@ -1,22 +1,24 @@
+// Task.java
 package com.keniareis.CheckList.entities;
 
-import java.time.LocalDate;
+import jakarta.persistence.*;
+import java.time.LocalDateTime;
 
+@Entity
 public class Task {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
-    private LocalDate date;
-    private String status;
+    private String name;
+    private String description;
+    private LocalDateTime createdDate;
 
-    public Task(){}
-
-    public Task(Long id, String nome, LocalDate date, String status) {
-        this.id = id;
-        this.nome = nome;
-        this.date = date;
-        this.status = status;
+    @PrePersist
+    protected void onCreate() {
+        createdDate = LocalDateTime.now();
     }
 
+    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -25,27 +27,27 @@ public class Task {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getStatus() {
-        return status;
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
     }
 }
