@@ -1,2 +1,3 @@
 ﻿# Check-List
 em andamento...
+![Texto Alternativo](https://github.com/keniareis/Check-List/blob/main/img_4_readme/preview.png)
