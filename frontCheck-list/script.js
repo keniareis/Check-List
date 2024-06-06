@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const tasksList = document.getElementById('tasksList');
-    const taskNameInput = document.querySelector('input[type="name"]'); 
+    const taskNameInput = document.querySelector('input[type="name"]');
     const taskDescriptionInput = document.getElementById('TaskDescription');
     const addTaskBtn = document.getElementById('addTaskBtn');
-
     const apiUrl = 'http://localhost:8080/tasks';
 
     async function createTask(){
@@ -28,11 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
             deleteTaskById(taskId);
         });
     });
-
+        
     addTaskBtn.addEventListener('click', createTask);
 
-    loadTasks();
+    loadTasks(); 
 });
+
 
 async function loadTasks(filter = ''){
     const apiUrl = 'http://localhost:8080/tasks';
@@ -69,6 +69,7 @@ async function loadTasks(filter = ''){
         });
     });
 }
+
 
 async function deleteTaskById(taskId) {
     const apiUrl = 'http://localhost:8080/tasks';
