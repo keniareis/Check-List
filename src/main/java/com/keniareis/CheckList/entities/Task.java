@@ -11,12 +11,6 @@ public class Task {
     private Long id;
     private String name;
     private String description;
-    private LocalDateTime createdDate;
-
-    @PrePersist
-    protected void onCreate() {
-        createdDate = LocalDateTime.now();
-    }
 
     // Getters and setters
     public Long getId() {
@@ -43,11 +37,4 @@ public class Task {
         this.description = description;
     }
 
-    public LocalDateTime getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(LocalDateTime createdDate) {
-        this.createdDate = createdDate;
-    }
 }
