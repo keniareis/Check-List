@@ -1,8 +1,6 @@
-// Task.java
 package com.keniareis.CheckList.entities;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 public class Task {
@@ -12,7 +10,6 @@ public class Task {
     private String name;
     private String description;
 
-    // Getters and setters
     public Long getId() {
         return id;
     }

@@ -25,7 +25,6 @@ public class TaskController {
     public List<Task> getAllTasks(@RequestParam(required = false) String sortBy) {
         Sort sort = Sort.by(Sort.Direction.ASC, sortBy != null ? sortBy : "name");
         return taskService.getAllTasks(sort);
-
     }
 
     @DeleteMapping("/{id}")
